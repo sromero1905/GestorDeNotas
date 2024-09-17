@@ -10,10 +10,20 @@ namespace CapaNegocio
 {
     public class CN_Login
     {
-        private CD_Login obcj_login = new CD_Login();
-        public List<Alumnos> listar()
+        private CD_Login obj_login = new CD_Login();
+        public List<Alumno> listarAlumnos()
         {
-            return obcj_login.listar();
+            return obj_login.ListarAlumnos();
+        }
+
+        public List<Profesor> listarProf()
+        {
+            return obj_login.ListarProfesores();
+        }
+
+        public List<Admin> ListarAdmin()
+        {
+            return obj_login.ListarAdmin();
         }
     }
 }

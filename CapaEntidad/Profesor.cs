@@ -12,6 +12,7 @@ namespace CapaEntidad
         public string Nombre { get; set; }
         public string Apellido { get; set; }
         public string Documento { get; set; }
+        public string Clave { get; set; }
         public Materia oMateria { get; set; }
         public Sede oSede { get; set; }
         public Rol oRol { get; set; }

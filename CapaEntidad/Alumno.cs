@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CapaEntidad
 {
-    public class Alumnos
+    public class Alumno
     {
         public int AlumnoId { get; set; }
         public string Nombre { get; set; }
@@ -16,6 +16,8 @@ namespace CapaEntidad
         public Sede oSede { get; set; }
         public List<MateriaCursada> oMateria { get; set; }
         public List<NotaAlumno> oNotaAlumno { get; set; }
+        public Rol oRol { get; set; }
+
 
     }
 }

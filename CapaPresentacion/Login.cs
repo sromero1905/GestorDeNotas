@@ -28,15 +28,18 @@ namespace CapaPresentacion
         private void MostrarInicio()
         {
 
-            List<Alumnos> loginA = new CN_Login().listar();
-            Alumnos oalumnos = loginA.Where(p => p.NumeroDocumento == txtDocumento.Text && p.Clave == txtClave.Text).FirstOrDefault();
+            List<Alumno> loginA = new CN_Login().listarAlumnos();
+            List<Profesor> LoginP = new CN_Login().listarProf();
+            Alumno oalumnos = loginA.Where(p => p.NumeroDocumento == txtDocumento.Text && p.Clave == txtClave.Text).FirstOrDefault();
+            Profesor oProfesor = LoginP.Where(P => P.Documento == txtDocumento.Text && P.Clave == txtClave.Text).FirstOrDefault();
+
             if (string.IsNullOrWhiteSpace(txtClave.Text)||string.IsNullOrWhiteSpace(txtDocumento.Text))
             {
                 MessageBox.Show("La Clave y el Numero De Documento no pueden estar vacios","Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            else if (oalumnos != null)
+            else if (oalumnos != null || oProfesor != null)
             {
-                Incio incio = new Incio(oalumnos);
+                Incio incio = new Incio(oalumnos,oProfesor);
                 incio.Show();
                 this.Hide();
             }

@@ -1,6 +1,6 @@
-﻿namespace CapaPresentacion
+﻿namespace CapaPresentacion.Admin
 {
-    partial class Form1
+    partial class AgregarAlumno
     {
         /// <summary>
         /// Required designer variable.
@@ -41,14 +41,14 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "soy agregar alumnos";
             // 
-            // Form1
+            // AgregarAlumno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.label1);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "AgregarAlumno";
+            this.Text = "AgregarAlumno";
             this.ResumeLayout(false);
             this.PerformLayout();
 
