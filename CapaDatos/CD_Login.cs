@@ -59,10 +59,10 @@ namespace CapaDatos
             });
         }
 
-        public List<Admin> ListarAdmin()
+        public List<Admins> ListarAdmin()
         {
             string query = "select AdminId, Nombre, Apellido, NumeroDocumento, Password, RoleId from Admin";
-            return ObtenerLista(query, dr => new Admin
+            return ObtenerLista(query, dr => new Admins
             {
                 AdminId = Convert.ToInt32(dr["AdminId"]),
                 Nombre = dr["Nombre"].ToString(),

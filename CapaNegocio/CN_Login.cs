@@ -21,7 +21,7 @@ namespace CapaNegocio
             return obj_login.ListarProfesores();
         }
 
-        public List<Admin> ListarAdmin()
+        public List<Admins> ListarAdmin()
         {
             return obj_login.ListarAdmin();
         }

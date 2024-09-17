@@ -18,11 +18,12 @@ namespace CapaPresentacion
     {
         private static Alumno objAlumno;
         private static Profesor objProfesor;
- 
-        private static Form FormularioActivo;
-        public Incio(Alumno alumno, Profesor profesor)
-        {
+        private static Admins objAdmin;
 
+        private static Form FormularioActivo;
+        public Incio(Alumno alumno, Profesor profesor,Admins admins)
+        {
+            objAdmin = admins;
             objProfesor = profesor;
             objAlumno = alumno;
             InitializeComponent();
@@ -53,6 +54,10 @@ namespace CapaPresentacion
             {
                 lblUsuario.Text = objProfesor.Nombre;
 
+            }
+            else
+            {
+                lblUsuario.Text = objAdmin.Nombre;
             }
            
         }
