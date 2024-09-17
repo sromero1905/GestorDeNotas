@@ -36,7 +36,7 @@ namespace CapaPresentacion
             }
             else if (oalumnos != null)
             {
-                Incio incio = new Incio();
+                Incio incio = new Incio(oalumnos);
                 incio.Show();
                 this.Hide();
             }

@@ -7,13 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using CapaEntidad;
 namespace CapaPresentacion
 {
     public partial class Incio : Form
     {
-        public Incio()
+        private static Alumnos objAlumno;
+        public Incio(Alumnos alumno)
         {
+            objAlumno = alumno;
             InitializeComponent();
         }
 
@@ -31,6 +33,11 @@ namespace CapaPresentacion
         private void Incio_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void Incio_Load(object sender, EventArgs e)
+        {
+            lblUsuario.Text = objAlumno.Nombre;
         }
     }
 }

@@ -34,10 +34,18 @@
             this.btnHistorial = new FontAwesome.Sharp.IconMenuItem();
             this.btnTeams = new FontAwesome.Sharp.IconMenuItem();
             this.btnSede = new FontAwesome.Sharp.IconMenuItem();
-            this.btnMiCuenta = new FontAwesome.Sharp.IconMenuItem();
+            this.btnProfesores = new FontAwesome.Sharp.IconMenuItem();
+            this.btnAlumnos = new FontAwesome.Sharp.IconMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.btnSalir = new FontAwesome.Sharp.IconButton();
+            this.lblUsuario = new System.Windows.Forms.Label();
+            this.btnAgregarNotas = new FontAwesome.Sharp.IconMenuItem();
+            this.btnAgregarMaterias = new FontAwesome.Sharp.IconMenuItem();
+            this.btnAgregarProfesores = new FontAwesome.Sharp.IconMenuItem();
+            this.iconMenuItem1 = new FontAwesome.Sharp.IconMenuItem();
+            this.btnAgregarAlumnos = new FontAwesome.Sharp.IconMenuItem();
+            this.btnVerAlumnos = new FontAwesome.Sharp.IconMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,34 +59,40 @@
             this.btnHistorial,
             this.btnTeams,
             this.btnSede,
-            this.btnMiCuenta});
+            this.btnProfesores,
+            this.iconMenuItem1,
+            this.btnAlumnos});
             this.menuStrip1.Location = new System.Drawing.Point(0, 38);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1112, 71);
+            this.menuStrip1.Size = new System.Drawing.Size(1123, 71);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // btnNotas
             // 
             this.btnNotas.AutoSize = false;
+            this.btnNotas.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btnAgregarNotas});
             this.btnNotas.IconChar = FontAwesome.Sharp.IconChar.FileText;
             this.btnNotas.IconColor = System.Drawing.Color.Black;
             this.btnNotas.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnNotas.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnNotas.Name = "btnNotas";
-            this.btnNotas.Size = new System.Drawing.Size(70, 67);
+            this.btnNotas.Size = new System.Drawing.Size(122, 67);
             this.btnNotas.Text = "Notas";
             this.btnNotas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
             // btnMateria
             // 
             this.btnMateria.AutoSize = false;
+            this.btnMateria.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btnAgregarMaterias});
             this.btnMateria.IconChar = FontAwesome.Sharp.IconChar.Book;
             this.btnMateria.IconColor = System.Drawing.Color.Black;
             this.btnMateria.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMateria.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnMateria.Name = "btnMateria";
-            this.btnMateria.Size = new System.Drawing.Size(70, 67);
+            this.btnMateria.Size = new System.Drawing.Size(122, 67);
             this.btnMateria.Text = "Materias";
             this.btnMateria.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
@@ -118,17 +132,34 @@
             this.btnSede.Text = "Sede";
             this.btnSede.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
-            // btnMiCuenta
+            // btnProfesores
             // 
-            this.btnMiCuenta.AutoSize = false;
-            this.btnMiCuenta.IconChar = FontAwesome.Sharp.IconChar.UserCircle;
-            this.btnMiCuenta.IconColor = System.Drawing.Color.Black;
-            this.btnMiCuenta.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnMiCuenta.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.btnMiCuenta.Name = "btnMiCuenta";
-            this.btnMiCuenta.Size = new System.Drawing.Size(74, 67);
-            this.btnMiCuenta.Text = "Mi Cuenta";
-            this.btnMiCuenta.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnProfesores.AutoSize = false;
+            this.btnProfesores.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btnAgregarProfesores});
+            this.btnProfesores.IconChar = FontAwesome.Sharp.IconChar.PersonChalkboard;
+            this.btnProfesores.IconColor = System.Drawing.Color.Black;
+            this.btnProfesores.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnProfesores.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.btnProfesores.Name = "btnProfesores";
+            this.btnProfesores.Size = new System.Drawing.Size(74, 67);
+            this.btnProfesores.Text = "Profesores";
+            this.btnProfesores.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
+            // btnAlumnos
+            // 
+            this.btnAlumnos.AutoSize = false;
+            this.btnAlumnos.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btnAgregarAlumnos,
+            this.btnVerAlumnos});
+            this.btnAlumnos.IconChar = FontAwesome.Sharp.IconChar.PeopleLine;
+            this.btnAlumnos.IconColor = System.Drawing.Color.Black;
+            this.btnAlumnos.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAlumnos.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.btnAlumnos.Name = "btnAlumnos";
+            this.btnAlumnos.Size = new System.Drawing.Size(74, 67);
+            this.btnAlumnos.Text = "Alumnos";
+            this.btnAlumnos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
             // label1
             // 
@@ -148,7 +179,8 @@
             this.menuStrip2.BackColor = System.Drawing.Color.Navy;
             this.menuStrip2.Location = new System.Drawing.Point(0, 0);
             this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Size = new System.Drawing.Size(1112, 38);
+            this.menuStrip2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.menuStrip2.Size = new System.Drawing.Size(1123, 38);
             this.menuStrip2.TabIndex = 2;
             this.menuStrip2.Text = "menuStrip2";
             // 
@@ -170,11 +202,81 @@
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
+            // lblUsuario
+            // 
+            this.lblUsuario.AutoSize = true;
+            this.lblUsuario.BackColor = System.Drawing.Color.Navy;
+            this.lblUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuario.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblUsuario.Location = new System.Drawing.Point(105, 10);
+            this.lblUsuario.Name = "lblUsuario";
+            this.lblUsuario.Size = new System.Drawing.Size(74, 18);
+            this.lblUsuario.TabIndex = 4;
+            this.lblUsuario.Text = "lblUsuario";
+            // 
+            // btnAgregarNotas
+            // 
+            this.btnAgregarNotas.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnAgregarNotas.IconColor = System.Drawing.Color.Black;
+            this.btnAgregarNotas.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAgregarNotas.Name = "btnAgregarNotas";
+            this.btnAgregarNotas.Size = new System.Drawing.Size(180, 22);
+            this.btnAgregarNotas.Text = "Agregar Notas";
+            // 
+            // btnAgregarMaterias
+            // 
+            this.btnAgregarMaterias.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnAgregarMaterias.IconColor = System.Drawing.Color.Black;
+            this.btnAgregarMaterias.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAgregarMaterias.Name = "btnAgregarMaterias";
+            this.btnAgregarMaterias.Size = new System.Drawing.Size(180, 22);
+            this.btnAgregarMaterias.Text = "Agregar Materias";
+            // 
+            // btnAgregarProfesores
+            // 
+            this.btnAgregarProfesores.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnAgregarProfesores.IconColor = System.Drawing.Color.Black;
+            this.btnAgregarProfesores.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAgregarProfesores.Name = "btnAgregarProfesores";
+            this.btnAgregarProfesores.Size = new System.Drawing.Size(180, 22);
+            this.btnAgregarProfesores.Text = "Agregar Profesores";
+            // 
+            // iconMenuItem1
+            // 
+            this.iconMenuItem1.AutoSize = false;
+            this.iconMenuItem1.IconChar = FontAwesome.Sharp.IconChar.UserCircle;
+            this.iconMenuItem1.IconColor = System.Drawing.Color.Black;
+            this.iconMenuItem1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.iconMenuItem1.Name = "iconMenuItem1";
+            this.iconMenuItem1.Size = new System.Drawing.Size(74, 67);
+            this.iconMenuItem1.Text = "Mi Cuenta";
+            this.iconMenuItem1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
+            // btnAgregarAlumnos
+            // 
+            this.btnAgregarAlumnos.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnAgregarAlumnos.IconColor = System.Drawing.Color.Black;
+            this.btnAgregarAlumnos.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAgregarAlumnos.Name = "btnAgregarAlumnos";
+            this.btnAgregarAlumnos.Size = new System.Drawing.Size(180, 22);
+            this.btnAgregarAlumnos.Text = "Agregar Alumnos";
+            // 
+            // btnVerAlumnos
+            // 
+            this.btnVerAlumnos.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnVerAlumnos.IconColor = System.Drawing.Color.Black;
+            this.btnVerAlumnos.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnVerAlumnos.Name = "btnVerAlumnos";
+            this.btnVerAlumnos.Size = new System.Drawing.Size(180, 22);
+            this.btnVerAlumnos.Text = "Ver Alumnos";
+            // 
             // Incio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1112, 450);
+            this.ClientSize = new System.Drawing.Size(1123, 478);
+            this.Controls.Add(this.lblUsuario);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
@@ -183,6 +285,7 @@
             this.Name = "Incio";
             this.Text = "Incio";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Incio_FormClosed);
+            this.Load += new System.EventHandler(this.Incio_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -193,7 +296,7 @@
         #endregion
 
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private FontAwesome.Sharp.IconMenuItem btnMiCuenta;
+        private FontAwesome.Sharp.IconMenuItem btnProfesores;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.MenuStrip menuStrip2;
         private FontAwesome.Sharp.IconMenuItem btnNotas;
@@ -202,5 +305,13 @@
         private FontAwesome.Sharp.IconMenuItem btnTeams;
         private FontAwesome.Sharp.IconMenuItem btnSede;
         private FontAwesome.Sharp.IconButton btnSalir;
+        private System.Windows.Forms.Label lblUsuario;
+        private FontAwesome.Sharp.IconMenuItem btnAlumnos;
+        private FontAwesome.Sharp.IconMenuItem btnAgregarNotas;
+        private FontAwesome.Sharp.IconMenuItem btnAgregarMaterias;
+        private FontAwesome.Sharp.IconMenuItem btnAgregarProfesores;
+        private FontAwesome.Sharp.IconMenuItem iconMenuItem1;
+        private FontAwesome.Sharp.IconMenuItem btnAgregarAlumnos;
+        private FontAwesome.Sharp.IconMenuItem btnVerAlumnos;
     }
 }
